@@ -1,24 +1,18 @@
 import React from 'react';
-import { render } from 'react-dom';
-// import {app} from './js/app'
-// import App from './js/App';
-// import './css/app.scss';
-// import './css/tailwind.css';
-// import { Provider } from 'overmind-react';
+import ReactDOM from 'react-dom';
+import './css/main.css';
+import './css/App.css';
+import App from './js/App';
+import * as serviceWorker from './serviceWorker';
 
-// import 'react-toastify/dist/ReactToastify.css';
-console.log("IN")
-const renderApp = () => render(
-    // <Provider value={app}>
-    <h1>This is from REACT</h1>
-    // </Provider>
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
-
-    , document.getElementById('root'));
-renderApp()
-// if (module.hot) {
-//     module.hot.accept(['./js/app', './js/App'], () => {
-//         renderApp();
-//     });
-
-// }
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

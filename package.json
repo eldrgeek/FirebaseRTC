@@ -1,45 +1,38 @@
 {
-    "name": "firebasertc",
-    "version": "1.0.0",
-    "description": "Firebase connection to webrtc",
-    "main": "src/index.js",
-    "dependencies": {
-        "overmind": "^23.1.0",
-        "overmind-react": "^24.1.0",
-        "postcss": "^7.0.32",
-        "postcss-loader": "^3.0.0",
-        "prop-types": "15.7.2",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "react-scripts": "^3.4.1"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/eldrgeek/FirebaseRTC.git"
-    },
-    "author": "Mike Wolf",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/eldrgeek/FirebaseRTC/issues"
-    },
-    "homepage": "https://github.com/eldrgeek/FirebaseRTC#readme",
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+  "name": "myapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material/dialog": "^7.0.0",
+    "@material/ripple": "^7.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "firebase": "^7.16.1",
+    "firebase-tools": "^8.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
