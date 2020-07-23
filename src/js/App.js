@@ -2,11 +2,14 @@ import React from 'react';
 // import logo from '../logo.svg';
 import '../css/App.css';
 import theApp from './theApp'
+import { useApp } from './overmind'
+
 
 function App() {
-    React.useEffect(()=>{
-        setTimeout(theApp,1000)
-    },[])
+    const context = useApp()
+    React.useEffect(() => {
+        setTimeout(() => theApp(context), 1000)
+    }, [context])
     return (
         <div className="App">
             <h1>Welcome to FirebaseRTC!</h1>
