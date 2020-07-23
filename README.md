@@ -1,9 +1,11 @@
 # Firebase + WebRTC Codelab
 
-This is the GitHub repo for the FirebaseRTC codelab. This will teach you how 
+This is the GitHub repo for the FirebaseRTC codelab. This will teach you how
 to use Firebase Cloudstore for signalling in a WebRTC video chat application.
 
 See http://webrtc.org for details.
+
+It was revised to use React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
