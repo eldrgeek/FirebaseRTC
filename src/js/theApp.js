@@ -1,8 +1,8 @@
-import firebase  from 'firebase';
-import {MDCRipple} from '@material/ripple'
-import {MDCDialog} from '@material/dialog'
+import firebase from 'firebase';
+import { MDCRipple } from '@material/ripple'
+import { MDCDialog } from '@material/dialog'
 const theApp = () => {
-    
+
     MDCRipple.attachTo(document.querySelector('.mdc-button'));
     const firebaseConfig = {
         apiKey: "AIzaSyAEM9uGdlfMsFAX1FaYBuiWT3Bh0ZfFRcE",
@@ -13,7 +13,7 @@ const theApp = () => {
         messagingSenderId: "208039221624",
         appId: "1:208039221624:web:894094b7d962d148aed08d"
     };
-    
+
     firebase.initializeApp(firebaseConfig);
     const configuration = {
         iceServers: [
@@ -46,9 +46,9 @@ const theApp = () => {
         document.querySelector('#joinBtn').disabled = true;
         const db = firebase.firestore();
         const roomRef = await db.collection('rooms').doc();
-        const bigSnap = await firebase.firestore().collection('rooms').get()
-        console.log("BIGSNAP!!")
-        bigSnap.docs.map(doc => {console.log("BIGSNAP", doc.data())});
+        // const bigSnap = await firebase.firestore().collection('rooms').get()
+        // console.log("BIGSNAP!!")
+        // bigSnap.docs.map(doc => { console.log("BIGSNAP", doc.data()) });
         console.log('Create PeerConnection with configuration: ', configuration);
         peerConnection = new RTCPeerConnection(configuration);
 
@@ -139,8 +139,8 @@ const theApp = () => {
     async function joinRoomById(roomId) {
         const db = firebase.firestore();
         const roomRef = db.collection('rooms').doc(`${roomId}`);
-         const bigSnap = await firebase.firestore().collection('rooms').get()
-        bigSnap.docs.map(doc => {console.log(doc.data())});
+        // const bigSnap = await firebase.firestore().collection('rooms').get()
+        // bigSnap.docs.map(doc => { console.log(doc.data()) });
         const roomSnapshot = await roomRef.get();
         debugger
         console.log('Got room:', roomSnapshot.exists);
